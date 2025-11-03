@@ -8,3 +8,24 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+/* Fallback: reliably center the navbar brand when Bootstrap utilities don't apply */
+.navbar .container-fluid {
+	position: relative;
+}
+
+.navbar .navbar-brand.center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* Slightly increase z-index so brand sits above other navbar items when needed */
+.navbar .navbar-brand.center {
+	z-index: 2;
+}
+
+/* If you prefer the brand not vertically centered, remove the top/translate(-50%, -50%) rules */
+
