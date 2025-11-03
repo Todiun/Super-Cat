@@ -1,0 +1,17 @@
+
+<div>
+    <h3>Comments</h3>
+
+    <%if cat.comments == []%>
+        <p>No one commented this cat yet.</p>
+    <%else%>
+        <%for comment in cat.comments do%>
+            <div>
+                <p>
+                    <strong><%=comment.user.email.split("@")[0].split(".").join(" ").titleize%></strong> says :<br>
+                    <%=comment.content%>
+                </p>
+            </div>
+        <%end%>
+    <%end%>
+</div>

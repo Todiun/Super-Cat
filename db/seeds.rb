@@ -29,7 +29,7 @@ end
 puts "Creating #{cat_count} cats"
 
 cat_count.times do
-    catname = Faker::ProgrammingLanguage.name
+    catname = Faker::ProgrammingLanguage.name.split[0]
     Cat.create(
         name: catname,
         race: Faker::Books::Lovecraft.deity,

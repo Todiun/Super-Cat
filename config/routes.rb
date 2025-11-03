@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Set the landing page as root
   root "static#landing"
   get "/landing" => "static#landing", as: :landing
+  get "/my_cats" => "static#my_cats", as: :my_cats
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

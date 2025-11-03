@@ -1,0 +1,8 @@
+<h1>My Cats</h1>
+
+<div id="cats">
+  <%owned = false%>
+  <% @cats.each do |cat| %>
+    <%= render "cats/cat_card", cat: cat %>
+  <% end %>
+</div>

@@ -6,11 +6,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Find cats</a>
+                    <a class="nav-link active" aria-current="page" href="<%=cats_path%>">Find cats</a>
                 </li>
                 <%if current_user%>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">My cats</a>
+                        <a class="nav-link active" href="<%=my_cats_path%>">My cats</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">
