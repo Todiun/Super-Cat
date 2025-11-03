@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :cat_ownerships
+  resources :comments
+  resources :cats
   devise_for :users
 
   # Set the landing page as root

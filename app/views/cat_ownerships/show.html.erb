@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cat_ownership %>
+
+<div>
+  <%= link_to "Edit this cat ownership", edit_cat_ownership_path(@cat_ownership) %> |
+  <%= link_to "Back to cat ownerships", cat_ownerships_path %>
+
+  <%= button_to "Destroy this cat ownership", @cat_ownership, method: :delete %>
+</div>

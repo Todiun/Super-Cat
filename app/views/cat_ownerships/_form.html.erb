@@ -1,0 +1,17 @@
+<%= form_with(model: cat_ownership) do |form| %>
+  <% if cat_ownership.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cat_ownership.errors.count, "error") %> prohibited this cat_ownership from being saved:</h2>
+
+      <ul>
+        <% cat_ownership.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
