@@ -67,4 +67,6 @@ class CatsController < ApplicationController
     def cat_params
       params.fetch(:cat, {})
     end
+
+
 end

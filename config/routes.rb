@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "/landing" => "static#landing", as: :landing
   get "/my_cats" => "static#my_cats", as: :my_cats
   get "/easter_egg" => "static#easter_egg", as: :easter_egg
+  get "/cart" => "static#cart", as: :cart
+  post 'static/add', to: 'static#add_to_cart', as: :add_to_cart
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

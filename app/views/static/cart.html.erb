@@ -1,0 +1,14 @@
+<div class="landing-container">
+    <p class="question-text">There you go. The last step.</p>
+</div>
+
+<% if @tempcart%>
+    <% for item in @tempcart do%>
+    <p><%= item.name %></p>
+    <% end %>
+<% else %>
+
+    <p> There is nothing here </p>
+<%end%>
+<%=@tempcart%>
+

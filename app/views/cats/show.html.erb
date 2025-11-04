@@ -13,6 +13,7 @@
   <%= link_to "Back to cats", cats_path %>
 
   <%= button_to "Destroy this cat", @cat, method: :delete %>
+  <%= button_to 'Add to Cart', add_to_cart_path(@cat), method: :post %>
 </div><br>
 
 
