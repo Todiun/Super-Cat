@@ -5,4 +5,7 @@ class StaticController < ApplicationController
   def my_cats
     @cats = current_user.cats
   end
+  
+    def easter_egg
+    end
 end
