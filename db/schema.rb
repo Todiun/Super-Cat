@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_03_140328) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_04_134829) do
+  create_table "carts", force: :cascade do |t|
+    t.integer "interested_user_id"
+    t.integer "carted_cat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["carted_cat_id"], name: "index_carts_on_carted_cat_id"
+    t.index ["interested_user_id"], name: "index_carts_on_interested_user_id"
+  end
+
   create_table "cat_ownerships", force: :cascade do |t|
     t.integer "cat_id"
     t.integer "user_id"
@@ -49,4 +58,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_03_140328) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+  add_foreign_key "carts", "cats", column: "carted_cat_id"
+  add_foreign_key "carts", "users", column: "interested_user_id"
 end

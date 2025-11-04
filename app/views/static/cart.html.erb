@@ -1,14 +1,18 @@
 <div class="landing-container">
     <p class="question-text">There you go. The last step.</p>
+    <% if @tempcart != []%> <%# @tempcart contient les objets du panier, soit online soit offline (voir le controlleur) %>
+        <% for item in @tempcart do%>
+            <div>
+                <h4><%= item.name %></h4>
+                <p><small><%= item.race%></small></p>
+                <p><%= item.description%></p>
+            </div>
+            ___
+        <% end %>
+    <% else %>
+        <p> There is nothing here </p>
+    <%end%>
 </div>
 
-<% if @tempcart%>
-    <% for item in @tempcart do%>
-    <p><%= item.name %></p>
-    <% end %>
-<% else %>
 
-    <p> There is nothing here </p>
-<%end%>
-<%=@tempcart%>
 

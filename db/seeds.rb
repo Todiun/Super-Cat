@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-
+Cart.destroy_all # Pas de chat ajouté au panier par défaut
 Cat.destroy_all
 User.destroy_all
 CatOwnership.destroy_all

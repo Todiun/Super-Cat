@@ -12,7 +12,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="<%=my_cats_path%>">My cats</a>
                     </li>
-
                     <li class="nav-item">
                         <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link active" %>
                     </li>
@@ -27,12 +26,12 @@
                             Register
                         </a>
                     </li>
-                                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="<%=cart_path%>">
-                            Cat Basket
-                        </a>
-                    </li>
                     <%end%>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<%=cart_path%>">
+                        Cat Basket
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
