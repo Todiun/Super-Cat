@@ -6,6 +6,7 @@
                 <h4><%= item.name %></h4>
                 <p><small><%= item.race%></small></p>
                 <p><%= item.description%></p>
+                <%= button_to 'Remove from cart', remove_from_cart_path(item), method: :post %>
             </div>
             ___
         <% end %>
