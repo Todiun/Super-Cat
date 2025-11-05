@@ -4,6 +4,7 @@
         <% for item in @tempcart do%>
             <div>
                 <h4><%= item.name %></h4>
+                <img src="<%=asset_path(item.cat_image)%>" width="60px">
                 <p><small><%= item.race%></small></p>
                 <p><%= item.description%></p>
                 <%= button_to 'Remove from cart', remove_from_cart_path(item), method: :post %>
