@@ -50,6 +50,16 @@ class StaticController < ApplicationController
       session[:cart] ||= [] # crée le cookie cart si il n'existe pas déjà
       session[:cart].push(params[:format])
     end
+    redirect_to :cart # redirige vers le panier apres avoir ajouté un élément
+  end
+
+  def remove_from_cart
+    if current_user
+      Cart.where(interested_user: current_user, carted_cat_id: params[:format]).first.destroy
+    else
+      session[:cart].delete(params[:format])
+    end
+    redirect_to :cart
   end
 
 end
