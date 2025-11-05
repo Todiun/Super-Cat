@@ -4,5 +4,6 @@
         <small><%=cat.race%></small><br>
         <%=cat.description%><br> 
     </p>
+    <img src="<%=asset_path(cat.cat_image)%>" width="150px">
     <p><a href="<%= cat_path(cat.id)%>">See this cat</a></p>
 </div>
