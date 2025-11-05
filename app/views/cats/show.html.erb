@@ -20,8 +20,8 @@
       </p>
       
       <div class="mt-4 text-center">
-        <%= button_to "Choose this cat",
-            class: "btn btn-primary px-4" %>
+        <%#= button_to "Add to cart", class: "btn btn-primary px-4" %>
+        <%= button_to 'Add to Cart', add_to_cart_path(@cat), method: :post %>
       </div>
       
       <div class="mt-3 text-center">
