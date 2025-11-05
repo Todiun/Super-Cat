@@ -5,9 +5,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
+      <img src="<%=asset_path(@cat.cat_image)%>" class="rounded img-fluid mx-auto d-block" alt="<%=@cat.name%>">
     </div>
     
-  <div class="col-md-6 bg-light p-4 rounded">
+    <div class="col-md-6 bg-light p-4 rounded">
       <h2 class="mb-4"><%= @cat.name %></h2>
       <p class="lead">
         So it's a cat. But it's a special cat that's for sure. Look at his frons. Spectacular! 

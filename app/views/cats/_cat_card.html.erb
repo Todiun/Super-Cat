@@ -2,14 +2,14 @@
 
   
   <div class="card-body">
-    <h5 class="card-title">A cat.</h5>
+    <h5 class="card-title ">A cat.</h5>
+    <img src="<%=asset_path(cat.cat_image)%>" width="150px" class='rounded mx-auto d-block'>
     <p class="card-text">
       <small class="text-body-secondary"><%= cat.race %></small>
       <br>
       <%= cat.description %>
     </p>
   </div>
-  
   <div class="card-footer bg-transparent border-0 text-center pb-3">
     <%= link_to "Choose this cat", cat_path(cat), class: "btn btn-primary px-4" %>
   </div>
