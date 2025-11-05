@@ -8,9 +8,14 @@
       <br>
       <%= cat.description %>
     </p>
+<<<<<<< HEAD
   </div>
   
   <div class="card-footer bg-transparent border-0 text-center pb-3">
     <%= link_to "Choose this cat", cat_path(cat), class: "btn btn-primary px-4" %>
   </div>
+=======
+    <img src="<%=asset_path(cat.cat_image)%>" width="150px">
+    <p><a href="<%= cat_path(cat.id)%>">See this cat</a></p>
+>>>>>>> main
 </div>

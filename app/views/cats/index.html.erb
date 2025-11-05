@@ -4,6 +4,7 @@
   <h1 class="display-4">Super CAT</h1>
   <p class="lead mb-5">Find your perfect cat in seconds.</p>
 
+<<<<<<< HEAD
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
   <% end %>
@@ -17,4 +18,13 @@
       <% end %>
     <% end %>
   </div>
+=======
+<h1>Cats</h1>
+
+<div id="cats">
+  <%unowned_cats = get_unowned_cats%>
+  <%for cat in unowned_cats do%>
+      <%= render "cat_card", cat: cat %>
+  <%end%>
+>>>>>>> main
 </div>
