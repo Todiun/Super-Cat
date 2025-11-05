@@ -3,7 +3,7 @@ class CatsController < ApplicationController
 
   # GET /cats or /cats.json
   def index
-    @cats = Cat.all
+    @cats = Cat.all.order(created_at: :desc)
   end
 
   # GET /cats/1 or /cats/1.json

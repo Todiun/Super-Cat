@@ -24808,3 +24808,245 @@ Processing by StaticController#cart as HTML
 Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-11-05 14:15:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SuperCat'*/[0m
+Processing by StaticController#landing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | GC: 0.0ms)
+Completed 200 OK in 423ms (Views: 38.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 31.7ms)
+
+
+Started GET "/cats/124" for 127.0.0.1 at 2025-11-05 14:15:09 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "124"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 124 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+Completed 404 Not Found in 47ms (ActiveRecord: 4.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Cat with 'id'="124"):
+  
+app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-05 14:15:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/cats/" for 127.0.0.1 at 2025-11-05 14:15:13 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 182 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 181 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 180 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 179 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 178 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 177 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 176 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 175 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 174 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 173 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 172 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 171 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 170 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 169 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 168 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 167 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 166 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 165 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 164 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 163 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 162 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 161 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 160 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 159 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 158 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 9.2ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 157 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 156 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 155 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 154 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 153 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 402.9ms | GC: 7.3ms)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 407.5ms | GC: 7.3ms)
+Completed 200 OK in 438ms (Views: 397.4ms | ActiveRecord: 15.5ms (31 queries, 0 cached) | GC: 7.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2025-11-05 14:15:16 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 3.6ms | GC: 0.0ms)
+  Rendered /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 34.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | GC: 0.0ms)
+Completed 200 OK in 73ms (Views: 44.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/cats" for 127.0.0.1 at 2025-11-05 14:15:16 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:9
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 182 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 181 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 180 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 179 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 178 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 177 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 176 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 175 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 174 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 173 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 172 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 171 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 170 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 169 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 168 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 167 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 166 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 165 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 164 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 163 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 162 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 161 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 160 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 159 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 158 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 157 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 156 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 155 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 154 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "cat_ownerships" ON "users"."id" = "cat_ownerships"."user_id" WHERE "cat_ownerships"."cat_id" = 153 /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 59.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 61.4ms | GC: 0.0ms)
+Completed 200 OK in 77ms (Views: 57.7ms | ActiveRecord: 4.1ms (31 queries, 0 cached) | GC: 0.0ms)
+
+
