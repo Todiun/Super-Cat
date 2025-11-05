@@ -9,6 +9,9 @@ class StaticController < ApplicationController
   def easter_egg
   end
 
+  def about
+  end
+
   def cart
 
     @tempcart = [] # Array temporaire qui contient le panier du user à traiter dans la view cart (qu'il soit connecté ou pas)
