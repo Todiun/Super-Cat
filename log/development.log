@@ -27227,3 +27227,518 @@ Processing by CatsController#show as HTML
 Completed 200 OK in 32ms (Views: 18.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for ::1 at 2025-11-05 14:56:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SuperCat'*/[0m
+Processing by StaticController#landing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | GC: 0.0ms)
+Completed 200 OK in 399ms (Views: 38.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 27.9ms)
+
+
+Started GET "/cats" for ::1 at 2025-11-05 14:56:42 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:12
+  Rendered cats/_cat_card.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 5.4ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 8.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 3.2ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 154.4ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 158.6ms | GC: 0.0ms)
+Completed 200 OK in 193ms (Views: 157.5ms | ActiveRecord: 5.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats/181" for ::1 at 2025-11-05 14:56:43 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "181"}
+  [1m[36mCat Load (5.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 181 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 39.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | GC: 0.0ms)
+Completed 200 OK in 93ms (Views: 48.4ms | ActiveRecord: 5.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats/178" for ::1 at 2025-11-05 14:56:44 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "178"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 178 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 4.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2025-11-05 14:56:45 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:12
+  Rendered cats/_cat_card.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 12.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 23.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/cats/178?class=btn+btn-primary+px-4" for ::1 at 2025-11-05 14:56:45 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/cats/178"):
+  
+Started GET "/cats/178" for ::1 at 2025-11-05 14:56:45 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "178"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 178 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 3.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2025-11-05 14:59:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SuperCat'*/[0m
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:12
+  Rendered cats/_cat_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.9ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 4.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 15.4ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 147.5ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 186.7ms | GC: 0.0ms)
+Completed 200 OK in 608ms (Views: 189.6ms | ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 59.6ms)
+
+
+Started GET "/cats/182" for ::1 at 2025-11-05 14:59:42 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "182"}
+  [1m[36mCat Load (8.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 182 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:71:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 66.6ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | GC: 0.0ms)
+Completed 200 OK in 144ms (Views: 77.2ms | ActiveRecord: 8.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/cats/182?class=btn+btn-primary+px-4" for ::1 at 2025-11-05 14:59:43 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/cats/182"):
+  
+Started GET "/cats/182" for ::1 at 2025-11-05 14:59:43 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "182"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 182 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:71:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 7.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/cart" for ::1 at 2025-11-05 14:59:45 +0100
+Processing by StaticController#cart as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/cart.html.erb within layouts/application
+  Rendered static/cart.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 9.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/cats" for ::1 at 2025-11-05 15:00:39 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:12
+  Rendered cats/_cat_card.html.erb (Duration: 4.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.7ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 106.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 135.6ms | GC: 0.0ms)
+Completed 200 OK in 188ms (Views: 136.4ms | ActiveRecord: 8.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats/182" for ::1 at 2025-11-05 15:00:40 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "182"}
+  [1m[36mCat Load (0.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 182 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 7.3ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 11.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cart" for ::1 at 2025-11-05 15:01:01 +0100
+Processing by StaticController#cart as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/cart.html.erb within layouts/application
+  Rendered static/cart.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 9.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 19.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2025-11-05 15:01:03 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:12
+  Rendered cats/_cat_card.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.7ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 46.2ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | GC: 0.0ms)
+Completed 200 OK in 99ms (Views: 49.0ms | ActiveRecord: 2.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats/181" for ::1 at 2025-11-05 15:01:04 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "181"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 181 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 7.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/cats/181?class=btn+btn-primary+px-4" for ::1 at 2025-11-05 15:01:05 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/cats/181"):
+  
+Started GET "/cats/181" for ::1 at 2025-11-05 15:01:05 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "181"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 181 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 8.8ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2025-11-05 15:01:37 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:12
+  Rendered cats/_cat_card.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 33.3ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 34.5ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-11-05 15:04:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SuperCat'*/[0m
+Processing by StaticController#landing as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/landing.html.erb within layouts/application
+  Rendered static/landing.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | GC: 0.0ms)
+Completed 200 OK in 402ms (Views: 42.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 31.2ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-11-05 15:04:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 22.9ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | GC: 0.0ms)
+Completed 200 OK in 80ms (Views: 35.6ms | ActiveRecord: 4.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats" for ::1 at 2025-11-05 15:04:14 +0100
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (9.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" ORDER BY "cats"."created_at" DESC /*action='index',application='SuperCat',controller='cats'*/[0m
+  ↳ app/views/cats/index.html.erb:12
+  Rendered cats/_cat_card.html.erb (Duration: 17.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 3.5ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 9.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered cats/_cat_card.html.erb (Duration: 5.4ms | GC: 0.0ms)
+  Rendered cats/index.html.erb within layouts/application (Duration: 183.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 192.3ms | GC: 0.0ms)
+Completed 200 OK in 262ms (Views: 191.7ms | ActiveRecord: 10.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cats/181" for ::1 at 2025-11-05 15:04:15 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "181"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 181 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 33.2ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | GC: 0.0ms)
+Completed 200 OK in 72ms (Views: 39.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/cats/181?class=btn+btn-primary+px-4" for ::1 at 2025-11-05 15:04:16 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/cats/181"):
+  
+Started GET "/cats/181" for ::1 at 2025-11-05 15:04:17 +0100
+Processing by CatsController#show as HTML
+  Parameters: {"id" => "181"}
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = 181 LIMIT 1 /*action='show',application='SuperCat',controller='cats'*/[0m
+  ↳ app/controllers/cats_controller.rb:63:in 'CatsController#set_cat'
+  Rendering layout layouts/application.html.erb
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | GC: 1.1ms)
+Completed 200 OK in 38ms (Views: 16.4ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 9.9ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2025-11-05 15:04:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/shared/_links.html.erb (Duration: 3.4ms | GC: 0.0ms)
+  Rendered /usr/local/rvm/gems/ruby-3.4.2/gems/devise-4.9.4/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 19.1ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 25.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/cart" for ::1 at 2025-11-05 15:04:18 +0100
+Processing by StaticController#cart as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static/cart.html.erb within layouts/application
+  Rendered static/cart.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
