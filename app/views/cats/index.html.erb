@@ -1,10 +1,9 @@
 <% content_for :title, "Find your perfect cat" %>
 
 <div class="container text-center my-5">
-  <h1 class="display-4">Super CAT</h1>
-  <p class="lead mb-5">Find your perfect cat in seconds.</p>
-
-<<<<<<< HEAD
+<div class="container-fluid bg-primary-subtle py-4 mb-4 text-center">
+  <h2 class="text-dark mb-0">Find your perfect cat in seconds.</h2>
+</div>
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>
   <% end %>
@@ -18,13 +17,4 @@
       <% end %>
     <% end %>
   </div>
-=======
-<h1>Cats</h1>
-
-<div id="cats">
-  <%unowned_cats = get_unowned_cats%>
-  <%for cat in unowned_cats do%>
-      <%= render "cat_card", cat: cat %>
-  <%end%>
->>>>>>> main
 </div>
