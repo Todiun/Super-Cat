@@ -150,6 +150,6 @@ for own in CatOwnership.all do
     Comment.create(
         cat_id: c.id,
         user_id: u.id,
-        content: user_comments_on_cats[rand(0..user_comments_on_cats.length)]
+        content: user_comments_on_cats[rand(0..(user_comments_on_cats.length - 1))]
     )
 end
