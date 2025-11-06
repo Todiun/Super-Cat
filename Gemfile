@@ -67,6 +67,6 @@ gem "devise", "~> 4.9"
 gem "faker", "~> 3.5"
 gem "table_print"
 
-gem "stripe", "~> 17.1"
+gem "stripe", "~> 17.2"
 
 gem "dotenv-rails", "~> 3.1"
