@@ -123,9 +123,9 @@ puts "Creating #{cat_count} cats"
 cat_number = 1
 cat_count.times do
     Cat.create(
-        name: cat_names[rand(0..cat_names.length)],
-        race: cat_breeds[rand(0..cat_breeds.length)],
-        description: cat_descriptions[rand(0..cat_descriptions.length)],
+        name: cat_names[rand(0..(cat_names.length - 1))],
+        race: cat_breeds[rand(0..(cat_breeds.length - 1))],
+        description: cat_descriptions[rand(0..(cat_descriptions.length - 1))],
         cat_image: "cat_images/cat#{cat_number}.jpg"
     )
     cat_number +=1
@@ -149,6 +149,6 @@ for own in CatOwnership.all do
     Comment.create(
         cat_id: c.id,
         user_id: u.id,
-        content: user_comments_on_cats[rand(0..user_comments_on_cats.length)]
+        content: user_comments_on_cats[rand(0..(user_comments_on_cats.length - 1))]
     )
 end
