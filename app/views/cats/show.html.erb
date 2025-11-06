@@ -18,13 +18,17 @@
         <small>Race: <%= @cat.race %></small><br>
         <%= @cat.description %>
       </p>
-      <p> 
-        This one is worth <strong><%= number_to_currency(@cat.price_cents / 100.0) %></strong>
+      <p>
+        <% if @cat.price_cents.present? %>
+          This one is worth <strong><%= number_to_currency(@cat.price_cents / 100.0) %></strong>
+        <% else %>
+          <em>Price not set</em>
+        <% end %>
       </p>
       
       <div class="mt-4 text-center">
         <%#= button_to "Add to cart", class: "btn btn-primary px-4" %>
-        <%= button_to 'Add to Cart', add_to_cart_path(@cat), method: :post %>
+        <%= button_to 'Add to Cart', add_to_cart_path(@cat), method: :post, class: "btn btn-primary px-4" %>
       </div>
       
       <div class="mt-3 text-center">

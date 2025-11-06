@@ -83,3 +83,77 @@
 	text-decoration: underline;
 }
 
+/* Cart page styles - scoped and lightweight to match Bootstrap look */
+.landing-container {
+	max-width: 920px;
+	margin: 2rem auto;
+	padding: 1rem;
+}
+
+.question-text {
+	font-size: 1.25rem;
+	font-weight: 600;
+	text-align: center;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.cart-item {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+	padding: 1rem;
+	background: #ffffff;
+	border: 1px solid rgba(0,0,0,0.05);
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+	margin-bottom: 1rem;
+}
+
+.cart-item h4 {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #212529;
+}
+
+.cart-item img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 6px;
+	border: 1px solid rgba(0,0,0,0.06);
+}
+
+.cart-item p {
+	margin: 0.25rem 0;
+	color: #555;
+	font-size: 0.95rem;
+}
+
+.cart-item .btn {
+	margin-left: auto;
+	align-self: center;
+}
+
+.empty-cart {
+	text-align: center;
+	color: #6c757d;
+	padding: 2rem 0;
+}
+
+/* Make cart items stack on small screens */
+@media (max-width: 576px) {
+	.cart-item {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.cart-item .btn {
+		margin-left: 0;
+		margin-top: 0.5rem;
+	}
+}
+
+

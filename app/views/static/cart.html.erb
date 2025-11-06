@@ -7,7 +7,8 @@
                 <img src="<%=asset_path(item.cat_image)%>" width="60px">
                 <p><small><%= item.race%></small></p>
                 <p><%= item.description%></p>
-                <%= button_to 'Remove from cart', remove_from_cart_path(item), method: :post %>
+                <p> Price: <strong><%= number_to_currency(item.price_cents / 100.0) %></strong></p>
+                <%= button_to 'Remove from cart', remove_from_cart_path(item), method: :post, class: "btn btn-primary" %>
             </div>
             ___
         <% end %>
@@ -15,8 +16,13 @@
         <p> There is nothing here </p>
     <%end%>
 </div>
-<div>
-    <%# button_to "Acheter avec Stripe", checkout_path(item_id: @cat.id), method: :post, data: { turbo: false } %>
+<div class="text-center my-3">
+    <%# Only show a single checkout button when the cart has items. Use server-side logic to
+            determine which items are being purchased; don't rely on `@cat` here (it is undefined in this view).
+    %>
+    <% if @tempcart.present? %>
+        <%= button_to "Acheter avec Stripe", checkout_path, method: :post, data: { turbo: false }, class: "btn btn-success" %>
+    <% end %>
 </div>
 
 <div class="mt-4">
