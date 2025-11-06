@@ -10,4 +10,11 @@ module SessionsHelper
         end
         return cats
     end
+
+    def accept_payment
+        for cat in current_user.carted_cats do
+            CatOwnership.create(user: current_user, cat: cat)
+        end
+        current_user.carted_cats.destroy_all
+    end
 end

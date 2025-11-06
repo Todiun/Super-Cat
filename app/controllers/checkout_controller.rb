@@ -1,14 +1,12 @@
 class CheckoutController < ApplicationController
   def create
+
     # Support checking out a single cat (params[:item_id]) or multiple cats stored in session[:cart]
     items = []
+    puts params
 
-    if params[:item_id].present?
-      # single-item checkout
-      items << Cat.find(params[:item_id])
-    elsif session[:cart].present?
-      # session[:cart] expected to be an Array of cat ids
-      items = Cat.where(id: session[:cart])
+    for thing in current_user.carted_cats do
+      items << thing
     end
 
     if items.blank?
@@ -30,15 +28,17 @@ class CheckoutController < ApplicationController
       payment_method_types: ['card'],
       line_items: line_items,
       mode: 'payment',
-      success_url: root_url + "?success=true",
+      success_url: success_url + "?success=true",
       cancel_url: root_url + "?canceled=true"
     )
 
     redirect_to stripe_session.url, allow_other_host: true
-  rescue ActiveRecord::RecordNotFound
-    redirect_to root_path, alert: 'Item not found'
-  rescue Stripe::StripeError => e
-    Rails.logger.error("Stripe error: #{e.message}")
-    redirect_to root_path, alert: "Payment error: #{e.message}"
-  end
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_path, alert: 'Item not found'
+    rescue Stripe::StripeError => e
+      Rails.logger.error("Stripe error: #{e.message}")
+      redirect_to root_path, alert: "Payment error: #{e.message}"
+      return
+    end
+
 end

@@ -65,4 +65,13 @@ class StaticController < ApplicationController
     redirect_to :cart
   end
 
+  def payment_accepted
+    if !params[:success] == "true"
+      redirect_to :landing
+      puts "payment failed"
+    else
+      accept_payment
+    end
+  end
+
 end

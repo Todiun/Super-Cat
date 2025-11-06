@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # Set the landing page as root
   root "static#landing"
   get "/landing" => "static#landing", as: :landing
+  get "/success" => "static#payment_accepted", as: :success
   get "/my_cats" => "static#my_cats", as: :my_cats
   get "/easter_egg" => "static#easter_egg", as: :easter_egg
   get "/cart" => "static#cart", as: :cart
