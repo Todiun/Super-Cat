@@ -126,7 +126,8 @@ cat_count.times do
         name: cat_names[rand(0..(cat_names.length - 1))],
         race: cat_breeds[rand(0..(cat_breeds.length - 1))],
         description: cat_descriptions[rand(0..(cat_descriptions.length - 1))],
-        cat_image: "cat_images/cat#{cat_number}.jpg"
+        cat_image: "cat_images/cat#{cat_number}.jpg",
+        price_cents: rand(500..5000)
     )
     cat_number +=1
     if cat_number > 20 # comme on a que 20 images de chats au cas où on veut plus que 20 chats, ça repart depuis la premiere image

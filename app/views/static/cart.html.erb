@@ -2,7 +2,7 @@
     <p class="question-text">There you go. The last step.</p>
     <% if @tempcart != []%> <%# @tempcart contient les objets du panier, soit online soit offline (voir le controlleur) %>
         <% for item in @tempcart do%>
-            <div>
+            <div class="cart-item">
                 <h4><%= item.name %></h4>
                 <img src="<%=asset_path(item.cat_image)%>" width="60px">
                 <p><small><%= item.race%></small></p>
@@ -16,6 +16,9 @@
     <%end%>
 </div>
 <div>
-    <%# button_to "Acheter avec Stripe", checkout_path(item_id: @item.id), method: :post, data: { turbo: false } %>
+    <%# button_to "Acheter avec Stripe", checkout_path(item_id: @cat.id), method: :post, data: { turbo: false } %>
 </div>
 
+<div class="mt-4">
+    <%= link_to "Back to cats", cats_path, class: "text-muted text-decoration-none" %>
+</div>

@@ -9,6 +9,7 @@
       <br>
       <%= cat.description %>
     </p>
+    <p> This one is worth <%= number_to_currency(cat.price_cents / 100.0) %> </p>
   </div>
   <div class="card-footer bg-transparent border-0 text-center pb-3">
     <%= link_to "Choose this cat", cat_path(cat), class: "btn btn-primary px-4" %>
