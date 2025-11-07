@@ -1,3 +1,8 @@
-<div>
-    <p>Payment accepted</p>
+<div class="payment-accepted container d-flex justify-content-center align-items-center">
+    <div class="thankyou-card text-center p-4 rounded shadow-sm">
+        <div class="check-emoji mb-3">✅</div>
+        <h2 class="mb-2">Thank you for your purchase</h2>
+        <p class="text-muted mb-3">We received your payment successfully. Your new friend will be with you soon!</p>
+        <%= link_to "Back to cats", cats_path, class: "btn btn-primary px-4" %>
+    </div>
 </div>

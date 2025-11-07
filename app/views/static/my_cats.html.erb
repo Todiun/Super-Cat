@@ -1,8 +1,16 @@
-<h1>My Cats</h1>
+<div class="my-cats-page container py-4">
+  <h1 class="my-cats-title mb-4">My Cats</h1>
 
-<div id="cats">
-  <%owned = false%>
-  <% @cats.each do |cat| %>
-    <%= render "cats/cat_card", cat: cat %>
+  <div id="cats" class="my-cats-grid">
+    <% owned = false %>
+    <% @cats.each do |cat| %>
+      <div class="my-cat-item">
+        <%= render "cats/cat_card", cat: cat %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @cats.blank? %>
+    <p class="text-muted mt-3">You don't own any cats yet.</p>
   <% end %>
 </div>

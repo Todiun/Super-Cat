@@ -156,4 +156,80 @@
 	}
 }
 
+/* Payment accepted / thank you page */
+.payment-accepted {
+	min-height: 60vh;
+	padding: 3rem 1rem;
+}
+
+.thankyou-card {
+	background: #fff;
+	border-radius: 12px;
+	padding: 2rem 2.5rem;
+	max-width: 560px;
+	width: 100%;
+	box-shadow: 0 6px 22px rgba(13,38,76,0.08);
+}
+
+.thankyou-card .check-emoji {
+	font-size: 2.5rem;
+}
+
+.thankyou-card h2 {
+	font-weight: 700;
+	color: #212529;
+}
+
+.thankyou-card p {
+	color: #6c757d;
+}
+
+@media (max-width: 576px) {
+	.thankyou-card { padding: 1.5rem; }
+}
+
+/* My Cats page styling */
+.my-cats-page {
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+.my-cats-title {
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #212529;
+}
+
+.my-cats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 1.25rem;
+	align-items: start;
+}
+
+.my-cat-item {
+	display: flex;
+}
+
+.my-cat-item .card {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.my-cat-item .card .card-body {
+	flex: 1 1 auto;
+}
+
+/* Empty state */
+.my-cats-page .text-muted {
+	color: #6c757d;
+}
+
+@media (max-width: 480px) {
+	.my-cats-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
 
